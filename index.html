@@ -14,6 +14,67 @@
     <body>
         <style>
             @import url('https://fonts.googleapis.com/css?family=Muli');
+
+            @keyframes Jumbotron_OnLoad
+            {
+                0%
+                {
+                    opacity: 0;
+                    box-shadow: 0px 0px 0px black;
+                    color: transparent;
+                    text-shadow: 0px 0px 0px transparent;
+                }
+                50%
+                {
+                    opacity: 1;
+                    box-shadow: 0px 0px 0px black;
+                    color: transparent;
+                    text-shadow: 0px 0px 0px transparent;
+                }
+                75%
+                {
+                    text-shadow: 0px 0px 0px transparent;
+                }
+                100%
+                {
+                    box-shadow: 0px 0px 48px black;
+                    color: rgb(255,255,255);
+                    text-shadow: 0px 0px 20px black;
+                }
+            }
+            @keyframes Servericon_OnLoad
+            {
+                0%
+                {
+                    opacity: 0;
+                    box-shadow: 0px 0px 0px transparent;
+                }
+                50%
+                {
+                    opacity: 0;
+                    box-shadow: 0px 0px 0px transparent;
+                }
+                100%
+                {
+                    opacity: 1;
+                    box-shadow: 0px 0px 24px black;
+                }
+            }
+            @keyframes Btn_OnLoad
+            {
+                0%
+                {
+                    opacity: 0;
+                }
+                50%
+                {
+                    opacity: 0;
+                }
+                100%
+                {
+                    opacity: 1;
+                }
+            }
             body
             {
                 background: rgb(10,10,10);
@@ -24,20 +85,42 @@
                 background: rgb(24,24,24);
                 color: rgb(255,255,255);
                 text-shadow: 0px 0px 20px black;
-                box-shadow: 0px 0px 36px black;
+                box-shadow: 0px 0px 48px black;
+                animation: 1s ease-in 0s 1 Jumbotron_OnLoad;
             }
             .servericon
             {
                 border-radius: 100%;
                 box-shadow: 0px 0px 24px black;
+                animation: 1s ease-in 0s 1 Servericon_OnLoad;
+            }
+            .btn
+            {
+                animation: 1s ease-in 0s 1 Btn_OnLoad;
+            }
+            .col-sm-4
+            {
+                color:white;
+                animation: 1s ease-in 0s 1 Btn_OnLoad;
             }
         </style>
+        <br>
         <div class="container">
             <div class="jumbotron text-center">
                 <img class="servericon" src="https://cdn.discordapp.com/icons/489160471736483841/f3fb420b60f4a9cff3b5b6e505d76318.png">
                 <h1>Social Dankness</h1> 
                 <br>
                 <a target="_blank" href="https://discord.gg/scEbdjN" class="btn btn-default" role="button"><b>Join Us On Discord</b></a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4" align="middle">
+                    <img src="https://cdn.icon-icons.com/icons2/1476/PNG/512/discord_101785.png" style="width: 64px; height: 64px;">
+                    <h3>Naughty and Funtime Heaven</h3>
+                    <a target="_blank" href="https://discord.gg/u4A4ghx" class="btn btn-default" role="button"><b>Join Their Server</b></a>
+                    <br>
+                </div>
             </div>
         </div>
     </body>
